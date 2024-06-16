@@ -3,9 +3,12 @@
 This is a web application to save employee profiles containing skills and projects.
 
 ## Technologies
-- Node.js
-- Express
-- React
+- Backend
+  - Node.js
+  - Express
+- Frontend
+  - React
+- RESTful endpoints (for communication between frontend and backend)
 
 ## Details
 The app is multi-modal. It has the following modules:
