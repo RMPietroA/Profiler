@@ -7,7 +7,7 @@ const faker = require('faker');
 router.get('/', async (req, res) => {
   // Mock data
   const mockProfiles = Array.from({ length: 10 }, () => ({
-    name: faker.name.fullName(),
+    name: faker.name.firstName() + " " + faker.name.lastName(),
     email: faker.internet.email(),
     location: faker.address.city(),
     skills: [],
@@ -19,8 +19,15 @@ router.get('/', async (req, res) => {
 
 // Get a specific profile
 router.get('/:id', async (req, res) => {
-  const profile = await Profile.findById(req.params.id);
-  res.json(profile);
+  // Mock data
+  const mockProfile = {
+    name: faker.name.firstName() + " " + faker.name.lastName(),
+    email: faker.internet.email(),
+    location: faker.address.city(),
+    skills: [],
+    projects: []
+  };
+  res.json(mockProfile);
 });
 
 // Create a new profile
