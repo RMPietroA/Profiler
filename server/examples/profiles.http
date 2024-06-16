@@ -1,0 +1,15 @@
+###
+
+GET http://localhost:8000/profiles
+Content-Type: application/json
+
+###
+
+POST http://localhost:8000/profiles
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "location": "New York"
+}
