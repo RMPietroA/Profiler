@@ -1,11 +1,20 @@
 const express = require('express');
 const router = express.Router();
 const Profile = require('../models/profile');
+const faker = require('faker');
 
 // Get all profiles
 router.get('/', async (req, res) => {
-  const profiles = await Profile.find();
-  res.json(profiles);
+  // Mock data
+  const mockProfiles = Array.from({ length: 10 }, () => ({
+    name: faker.name.fullName(),
+    email: faker.internet.email(),
+    location: faker.address.city(),
+    skills: [],
+    projects: []
+  }));
+
+  res.json(mockProfiles);
 });
 
 // Get a specific profile
