@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const Profile = require('../models/profile');
 const faker = require('faker');
 
 // temporary storage to fake a database

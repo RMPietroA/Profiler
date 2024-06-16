@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const Skill = require('../models/skill');
 
 // Get all skills
 router.get('/', async (req, res) => {
