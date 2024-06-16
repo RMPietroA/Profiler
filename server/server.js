@@ -17,9 +17,10 @@ app.use(cors());
 // Use routes
 app.get('/', (req, res) => {
   res.send(`
+    <h1>Available APIs</h1>
     <ul>
-      <li><a href="/profiles">Profiles</a></li>
       <li><a href="/skills">Skills</a></li>
+      <li><a href="/profiles">Profiles</a></li>
     </ul>
   `);
 });
