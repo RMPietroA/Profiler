@@ -20,13 +20,11 @@ app.get('/', (req, res) => {
     <ul>
       <li><a href="/profiles">Profiles</a></li>
       <li><a href="/skills">Skills</a></li>
-      <li><a href="/projects">Projects</a></li>
     </ul>
   `);
 });
 app.use('/profiles', profileRoutes);
 app.use('/skills', skillRoutes);
-// app.use('/projects', projectRoutes);
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
