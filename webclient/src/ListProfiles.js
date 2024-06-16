@@ -6,7 +6,10 @@ function ListProfiles() {
   useEffect(() => {
     fetch('http://localhost:8000/profiles')
       .then(response => response.json())
-      .then(data => setProfiles(data));
+      .then(data => {
+        const sortedProfiles = data.sort((a, b) => a.name.localeCompare(b.name));
+        setProfiles(sortedProfiles);
+      });
   }, []);
 
   return (
