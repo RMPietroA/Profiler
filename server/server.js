@@ -15,6 +15,15 @@ app.use(express.json());
 app.use(cors());
 
 // Use routes
+app.get('/', (req, res) => {
+  res.send(`
+    <ul>
+      <li><a href="/profiles">Profiles</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/projects">Projects</a></li>
+    </ul>
+  `);
+});
 app.use('/profiles', profileRoutes);
 app.use('/skills', skillRoutes);
 // app.use('/projects', projectRoutes);
